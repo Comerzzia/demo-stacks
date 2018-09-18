@@ -1,0 +1,84 @@
+version: '2.1'
+services:
+  apache:
+    container_name: apache
+    image: docker-repo.tier1.es:5043/producto/demo/comerzzia/apache:2.4
+    environment:
+      - APACHE_CONFIG_ENABLED=repositorios
+      - SVN_REPOS=comerzzia
+      - APACHE_SITES_ENABLED=app
+    ports:
+      - "8080:80"
+    volumes:
+      - apache_svn:/apps/repositorios/svn
+  sol:
+    image: docker-repo.tier1.es:5043/producto/comerzzia/sol:4.2.1-SNAPSHOT
+    environment:
+      COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
+      COMERZZIA_DB_DRIVER: mysql
+      COMERZZIA_DB_PASS: comerzzia
+      COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
+      COMERZZIA_DB_USER: comerzzia
+      PORTAL_DB_PASS: cmzportal
+      PORTAL_DB_URL: jdbc:mysql://db:3306/cmzportal
+      PORTAL_DB_USER: cmzportal
+      SLEEP: 30
+    volumes:
+      - sol_liferay_data:/apps/bin/jboss/standalone/liferay
+    depends_on:
+      db:
+        condition: service_healthy
+      backoffice:
+        condition: service_started
+  sol-food:
+    image: docker-repo.tier1.es:5043/producto/comerzzia/sol-food:4.2.1-SNAPSHOT
+    environment:
+      COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
+      COMERZZIA_DB_DRIVER: mysql
+      COMERZZIA_DB_PASS: comerzzia
+      COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
+      COMERZZIA_DB_USER: comerzzia
+      PORTAL_DB_PASS: cmzportal-food
+      PORTAL_DB_URL: jdbc:mysql://db:3306/cmzportal-food
+      PORTAL_DB_USER: cmzportal-food
+      JAVA_OPTS_MS: '1024'
+      JAVA_OPTS_MX: '2048'
+      SLEEP: 30
+    volumes:
+      - sol_food_liferay_data:/apps/bin/jboss/standalone/liferay
+    depends_on:
+      db:
+        condition: service_healthy
+      backoffice:
+        condition: service_started
+  backoffice:
+    image: docker-repo.tier1.es:5043/producto/comerzzia/backoffice:4.2.1-SNAPSHOT
+    environment:
+      COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
+      COMERZZIA_DB_DRIVER: mysql
+      COMERZZIA_DB_PASS: comerzzia
+      COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
+      COMERZZIA_DB_USER: comerzzia
+      SLEEP: 30
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: docker-repo.tier1.es:5043/producto/base-mariadb:10.1
+    environment:
+      MYSQL_ROOT_PASSWORD: comerzzia
+      OTHER_DB_USERS: comerzzia,cmzportal,cmzportal-food
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysql", "-pcomerzzia", "--host=localhost", "--port=3306", "-e 'SELECT 1'"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  apache_svn: {}
+  db_data: {}
+  sol_liferay_data: {}
+  sol_food_liferay_data: {}
