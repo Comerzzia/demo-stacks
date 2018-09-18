@@ -1,0 +1,16 @@
+version: '2'
+services:
+  apache:
+    container_name: apache
+    image: docker-repo.tier1.es:5043/producto/demo/comerzzia/apache:2.4
+    environment:
+      - APACHE_CONFIG_ENABLED=repositorios
+      - SVN_REPOS=comerzzia
+      - APACHE_SITES_ENABLED=app
+    ports:
+      - "8080:80"
+    volumes:
+      - apache_svn:/apps/repositorios/svn
+
+volumes:
+  apache_svn: {}
