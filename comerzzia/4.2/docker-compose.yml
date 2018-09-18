@@ -65,7 +65,8 @@ services:
       COMERZZIA_DB_USER: comerzzia
       SLEEP: 30
     depends_on:
-      db:
+      - db
+      # db:
         # condition: service_healthy
   db:
     image: docker-repo.tier1.es:5043/producto/base-mariadb:10.1
