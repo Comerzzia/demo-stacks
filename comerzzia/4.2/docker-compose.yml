@@ -26,10 +26,12 @@ services:
     volumes:
       - sol_liferay_data:/apps/bin/jboss/standalone/liferay
     depends_on:
-      db:
-        condition: service_healthy
-      backoffice:
-        condition: service_started
+      - db
+      - backoffice
+      # db:
+      #   condition: service_healthy
+      # backoffice:
+      #   condition: service_started
   sol-food:
     image: docker-repo.tier1.es:5043/producto/comerzzia/sol-food:4.2.1-SNAPSHOT
     environment:
@@ -47,10 +49,12 @@ services:
     volumes:
       - sol_food_liferay_data:/apps/bin/jboss/standalone/liferay
     depends_on:
-      db:
-        condition: service_healthy
-      backoffice:
-        condition: service_started
+      - db
+      - backoffice
+      # db:
+      #   condition: service_healthy
+      # backoffice:
+      #   condition: service_started
   backoffice:
     image: docker-repo.tier1.es:5043/producto/comerzzia/backoffice:4.2.1-SNAPSHOT
     environment:
@@ -62,7 +66,7 @@ services:
       SLEEP: 30
     depends_on:
       db:
-        condition: service_healthy
+        # condition: service_healthy
   db:
     image: docker-repo.tier1.es:5043/producto/base-mariadb:10.1
     environment:
@@ -70,12 +74,12 @@ services:
       OTHER_DB_USERS: comerzzia,cmzportal,cmzportal-food
     volumes:
       - db_data:/var/lib/mysql
-    healthcheck:
-      test: ["CMD", "mysql", "-pcomerzzia", "--host=localhost", "--port=3306", "-e 'SELECT 1'"]
-      interval: 1m30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
+    # healthcheck:
+    #   test: ["CMD", "mysql", "-pcomerzzia", "--host=localhost", "--port=3306", "-e 'SELECT 1'"]
+      # interval: 1m30s
+      # timeout: 10s
+      # retries: 3
+      # start_period: 40s
 
 volumes:
   apache_svn: {}
