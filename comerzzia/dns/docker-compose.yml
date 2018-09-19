@@ -6,4 +6,4 @@ services:
     ports:
       - "53:53/UDP"
     environment:
-      - DNS_HOSTS: "sol.czz.demo.local sol-food.czz.demo.local"
+      - DNS_HOSTS="sol.czz.demo.local sol-food.czz.demo.local"
