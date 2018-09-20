@@ -1,0 +1,34 @@
+version: '2'
+services:
+  sol:
+    image: docker-repo.tier1.es:5043/producto/comerzzia/sol:4.2.1-SNAPSHOT
+    environment:
+      COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
+      COMERZZIA_DB_DRIVER: mysql
+      COMERZZIA_DB_PASS: comerzzia
+      COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
+      COMERZZIA_DB_USER: comerzzia
+      PORTAL_DB_PASS: cmzportal
+      PORTAL_DB_URL: jdbc:mysql://db:3306/cmzportal
+      PORTAL_DB_USER: cmzportal
+      SLEEP: 30
+    volumes:
+      - sol_liferay_data:/apps/bin/jboss/standalone/liferay
+    networks:
+       - comerzzia_42
+    depends_on:
+      - data-updater-nonfood
+  data-updater-nonfood:
+    image: docker-repo.tier1.es:5043/contrib/data-updater-nonfood:4.2
+    command: ["import"]
+    environment:
+      DST_DIR: document_library
+    volumes:
+      - sol_liferay_data:/mnt
+    network_mode: "none"
+
+volumes:
+  sol_liferay_data: {}
+
+networks:
+  comerzzia_42:

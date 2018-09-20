@@ -1,0 +1,36 @@
+version: '2'
+services:
+  sol-food:
+    image: docker-repo.tier1.es:5043/producto/comerzzia/sol-food:4.2.1-SNAPSHOT
+    environment:
+      COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
+      COMERZZIA_DB_DRIVER: mysql
+      COMERZZIA_DB_PASS: comerzzia
+      COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
+      COMERZZIA_DB_USER: comerzzia
+      PORTAL_DB_PASS: cmzportal-food
+      PORTAL_DB_URL: jdbc:mysql://db:3306/cmzportal-food
+      PORTAL_DB_USER: cmzportal-food
+      JAVA_OPTS_MS: '1024'
+      JAVA_OPTS_MX: '2048'
+      SLEEP: 30
+    volumes:
+      - sol_food_liferay_data:/apps/bin/jboss/standalone/liferay
+    networks:
+       - comerzzia_42
+    depends_on:
+      - data-updater-food
+  data-updater-food:
+    image: docker-repo.tier1.es:5043/contrib/data-updater-food:4.2
+    command: ["import"]
+    environment:
+      DST_DIR: document_library
+    volumes:
+      - sol_food_liferay_data:/mnt
+    network_mode: "none"
+
+volumes:
+  sol_food_liferay_data: {}
+
+networks:
+  comerzzia_42:
