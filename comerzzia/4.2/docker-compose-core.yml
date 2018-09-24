@@ -1,7 +1,6 @@
 version: '2'
 services:
   apache:
-    container_name: apache
     image: docker-repo.tier1.es:5043/producto/demo/comerzzia/apache:2.4
     environment:
       - APACHE_CONFIG_ENABLED=repositorios
@@ -10,9 +9,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - apache_svn:/apps/repositorios/svn
-    networks:
-      - comerzzia_42
+      - comerzzia42_apache_svn:/apps/repositorios/svn
   backoffice:
     image: docker-repo.tier1.es:5043/producto/comerzzia/backoffice:4.2.1-SNAPSHOT
     environment:
@@ -22,8 +19,6 @@ services:
       COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
       COMERZZIA_DB_USER: comerzzia
       SLEEP: 30
-    networks:
-      - comerzzia_42
     depends_on:
       - db
       # db:
@@ -34,9 +29,7 @@ services:
       MYSQL_ROOT_PASSWORD: comerzzia
       OTHER_DB_USERS: comerzzia,cmzportal,cmzportal-food
     volumes:
-      - db_data:/var/lib/mysql
-    networks:
-      - comerzzia_42
+      - comerzzia42_db_data:/var/lib/mysql
     # healthcheck:
     #   test: ["CMD", "mysql", "-pcomerzzia", "--host=localhost", "--port=3306", "-e 'SELECT 1'"]
       # interval: 1m30s
@@ -44,7 +37,7 @@ services:
       # retries: 3
       # start_period: 40s
   db-updater:
-    image: docker-repo.tier1.es:5043/contrib/db-updater:4.2
+    image: docker-repo.tier1.es:5043/producto/comerzzia/demo/db-updater:4.2
     environment:
       DST_DB_HOST: db
       DST_DB_USER: root
@@ -52,12 +45,3 @@ services:
       VERSION: 4.2
     depends_on:
       - db
-    networks:
-      - comerzzia_42
-
-volumes:
-  apache_svn: {}
-  db_data: {}
-
-networks:
-  comerzzia_42:

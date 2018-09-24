@@ -9,6 +9,8 @@ services:
       COMERZZIA_DB_DRIVER: com.mysql.jdbc.Driver
     networks:
       - comerzzia_42
-      
+
 networks:
   comerzzia_42:
+    external:
+      name: comerzzia42_default

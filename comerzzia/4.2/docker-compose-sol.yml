@@ -11,24 +11,27 @@ services:
       PORTAL_DB_PASS: cmzportal
       PORTAL_DB_URL: jdbc:mysql://db:3306/cmzportal
       PORTAL_DB_USER: cmzportal
+      JAVA_OPTS_MS: '512'
+      JAVA_OPTS_MX: '1024'
       SLEEP: 30
     volumes:
-      - sol_liferay_data:/apps/bin/jboss/standalone/liferay
+      - comerzzia42_sol_liferay_data:/apps/bin/jboss/standalone/liferay
     networks:
        - comerzzia_42
+    extra_hosts:
+      - "sol.czz.demo.local:127.0.0.1"
     depends_on:
-      - data-updater-nonfood
-  data-updater-nonfood:
+      - data-updater
+  data-updater:
     image: docker-repo.tier1.es:5043/contrib/data-updater-nonfood:4.2
     command: ["import"]
     environment:
       DST_DIR: document_library
     volumes:
-      - sol_liferay_data:/mnt
+      - comerzzia42_sol_liferay_data:/mnt
     network_mode: "none"
-
-volumes:
-  sol_liferay_data: {}
 
 networks:
   comerzzia_42:
+    external:
+      name: comerzzia42_default
