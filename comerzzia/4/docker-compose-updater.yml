@@ -9,6 +9,7 @@ services:
       DST_DB_USER: root
       DST_DB_PASS: comerzzia
       VERSION: ${STACK_NAME}
+      HOST_IP_ADDRESS:
     networks:
       - comerzzia
   data-updater-nonfood:

@@ -154,5 +154,32 @@
         ]
       }
     ]
-  }
+  },
+  {
+  "type": 3,
+  "title": "comerzzia data updater (demo)",
+  "description": "Comerzzia data updater for demo platform.",
+  "note": "",
+  "categories": ["comerzzia", "updater"],
+  "platform": "linux",
+  "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
+  "repository": {
+    "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+    "stackfile": "/comerzzia/4/docker-compose-updater.yml"
+  },
+  "env": [
+    {
+      "name": "STACK_NAME",
+      "label": "Stack name",
+      "description": "It must be the same for all the products using the same version.",
+      "select": [
+        {
+          "text": "Comerzzia 4.2",
+          "value": "comerzzia42",
+          "default": true
+        }
+      ]
+    }
+  ]
+}
 ]
