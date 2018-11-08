@@ -126,7 +126,7 @@
     "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
     "repository": {
       "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
-      "stackfile": "/comerzzia/4/docker-compose-sol-outstore.yml"
+      "stackfile": "/comerzzia/4/docker-compose-outstore.yml"
     },
     "env": [
       {
