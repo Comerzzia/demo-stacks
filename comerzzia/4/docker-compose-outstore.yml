@@ -6,7 +6,7 @@ services:
       COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
       COMERZZIA_DB_USER: comerzzia
       COMERZZIA_DB_PASS: comerzzia
-      COMERZZIA_DB_DRIVER: com.mysql.jdbc.Driver
+      COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
     networks:
       - comerzzia
 
