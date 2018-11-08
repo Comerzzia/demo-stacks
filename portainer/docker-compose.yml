@@ -11,4 +11,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
     restart: always
-    command: ["--templates", "http://my-host.my-domain/templates.json", "--hide-label", "core"]
+    command: ["--templates", "https://box.comerzzia.com/index.php/s/zAQQbt2Enb97JG5/download", "--hide-label", "core"]

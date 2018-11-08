@@ -1,158 +1,156 @@
-[
-  {
-    "type": "stack",
-    "title": "Comerzzia Core (demo)",
-    "description": "Comerzzia demo platform core components",
-    "note": "",
-    "categories": ["comerzzia"],
-    "platform": "linux",
-    "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
-    "repository": {
-      "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
-      "stackfile": "/comerzzia/4/docker-compose-core.yml"
+{
+  "type": 2,
+  "title": "Comerzzia Core (demo)",
+  "description": "Comerzzia demo platform core components",
+  "note": "",
+  "categories": ["comerzzia"],
+  "platform": "linux",
+  "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
+  "repository": {
+    "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+    "stackfile": "/comerzzia/4/docker-compose-core.yml"
+  },
+  "env": [
+    {
+      "name": "STACK_NAME",
+      "label": "Stack name",
+      "description": "It must be the same for all the products using the same version.",
+      "select": [
+        {
+          "text": "Comerzzia 4.2",
+          "value": "comerzzia42",
+          "default": true
+        }
+      ]
     },
-    "env": [
-      {
-        "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
-            "default": true
-          }
-        ]
-      },
-      {
-        "name": "CZZ_VERSION",
-        "label": "Comerzzia version",
-        "description": "",
-        "select": [
-          {
-            "text": "4.2.1",
-            "value": "backoffice:4.2.1-SNAPSHOT",
-            "default": true
-          }
-        ]
-      }
-    ]
+    {
+      "name": "CZZ_VERSION",
+      "label": "Comerzzia version",
+      "description": "",
+      "select": [
+        {
+          "text": "4.2.1",
+          "value": "backoffice:4.2.1-SNAPSHOT",
+          "default": true
+        }
+      ]
+    }
+  ]
   },
   {
-    "type": "stack",
-    "title": "Comerzzia SOL (demo)",
-    "description": "Comerzzia non-food eCommerce demo platform.",
-    "note": "",
-    "categories": ["comerzzia", "sol"],
-    "platform": "linux",
-    "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
-    "repository": {
-      "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
-      "stackfile": "/comerzzia/4/docker-compose-sol.yml"
+  "type": 2,
+  "title": "Comerzzia SOL (demo)",
+  "description": "Comerzzia non-food eCommerce demo platform.",
+  "note": "",
+  "categories": ["comerzzia", "sol"],
+  "platform": "linux",
+  "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
+  "repository": {
+    "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+    "stackfile": "/comerzzia/4/docker-compose-sol.yml"
+  },
+  "env": [
+    {
+      "name": "STACK_NAME",
+      "label": "Stack name",
+      "description": "It must be the same for all the products using the same version.",
+      "select": [
+        {
+          "text": "Comerzzia 4.2",
+          "value": "comerzzia42",
+          "default": true
+        }
+      ]
     },
-    "env": [
-      {
-        "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
-            "default": true
-          }
-        ]
-      },
-      {
-        "name": "CZZSOL_VERSION",
-        "label": "Comerzzia SOL version",
-        "description": "",
-        "select": [
-          {
-            "text": "4.2.1",
-            "value": "sol:4.2.1-SNAPSHOT",
-            "default": true
-          }
-        ]
-      }
-    ]
+    {
+      "name": "CZZSOL_VERSION",
+      "label": "Comerzzia SOL version",
+      "description": "",
+      "select": [
+        {
+          "text": "4.2.1",
+          "value": "sol:4.2.1-SNAPSHOT",
+          "default": true
+        }
+      ]
+    }
+  ]
   },
   {
-    "type": "stack",
-    "title": "Comerzzia SOL (demo)",
-    "description": "Comerzzia food eCommerce demo platform.",
-    "note": "",
-    "categories": ["comerzzia", "sol"],
-    "platform": "linux",
-    "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
-    "repository": {
-      "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
-      "stackfile": "/comerzzia/4/docker-compose-sol-food.yml"
+  "type": 2,
+  "title": "Comerzzia SOL (demo)",
+  "description": "Comerzzia food eCommerce demo platform.",
+  "note": "",
+  "categories": ["comerzzia", "sol"],
+  "platform": "linux",
+  "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
+  "repository": {
+    "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+    "stackfile": "/comerzzia/4/docker-compose-sol-food.yml"
+  },
+  "env": [
+    {
+      "name": "STACK_NAME",
+      "label": "Stack name",
+      "description": "It must be the same for all the products using the same version.",
+      "select": [
+        {
+          "text": "Comerzzia 4.2",
+          "value": "comerzzia42",
+          "default": true
+        }
+      ]
     },
-    "env": [
-      {
-        "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
-            "default": true
-          }
-        ]
-      },
-      {
-        "name": "CZZSOL_VERSION",
-        "label": "Comerzzia SOL version",
-        "description": "",
-        "select": [
-          {
-            "text": "4.2.1",
-            "value": "sol-food:4.2.1-SNAPSHOT",
-            "default": true
-          }
-        ]
-      }
-    ]
+    {
+      "name": "CZZSOL_VERSION",
+      "label": "Comerzzia SOL version",
+      "description": "",
+      "select": [
+        {
+          "text": "4.2.1",
+          "value": "sol-food:4.2.1-SNAPSHOT",
+          "default": true
+        }
+      ]
+    }
+  ]
   },
   {
-    "type": "stack",
-    "title": "Comerzzia backoffice OutStore (demo)",
-    "description": "Comerzzia food eCommerce demo platform.",
-    "note": "",
-    "categories": ["comerzzia", "outstore"],
-    "platform": "linux",
-    "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
-    "repository": {
-      "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
-      "stackfile": "/comerzzia/4/docker-compose-sol-outstore.yml"
+  "type": 2,
+  "title": "Comerzzia backoffice OutStore (demo)",
+  "description": "Comerzzia food eCommerce demo platform.",
+  "note": "",
+  "categories": ["comerzzia", "outstore"],
+  "platform": "linux",
+  "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
+  "repository": {
+    "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+    "stackfile": "/comerzzia/4/docker-compose-sol-outstore.yml"
+  },
+  "env": [
+    {
+      "name": "STACK_NAME",
+      "label": "Stack name",
+      "description": "It must be the same for all the products using the same version.",
+      "select": [
+        {
+          "text": "Comerzzia 4.2",
+          "value": "comerzzia42",
+          "default": true
+        }
+      ]
     },
-    "env": [
-      {
-        "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
-            "default": true
-          }
-        ]
-      },
-      {
-        "name": "CZZOUTSTORE_VERSION",
-        "label": "Comerzzia OutStore version",
-        "description": "",
-        "select": [
-          {
-            "text": "4.2.1",
-            "value": "outstore:4.2.1-SNAPSHOT",
-            "default": true
-          }
-        ]
-      }
-    ]
-  }
-]
+    {
+      "name": "CZZOUTSTORE_VERSION",
+      "label": "Comerzzia OutStore version",
+      "description": "",
+      "select": [
+        {
+          "text": "4.2.1",
+          "value": "outstore:4.2.1-SNAPSHOT",
+          "default": true
+        }
+      ]
+    }
+  ]
+}
