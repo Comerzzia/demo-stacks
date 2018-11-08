@@ -1,16 +1,16 @@
 version: '2'
 services:
   backoffice-outstore:
-    image: docker-repo.tier1.es:5043/producto/comerzzia/outstore:4.2.1-SNAPSHOT
+    image: docker-repo.tier1.es:5043/producto/comerzzia/${CZZOUTSTORE_VERSION}
     environment:
       COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
       COMERZZIA_DB_USER: comerzzia
       COMERZZIA_DB_PASS: comerzzia
       COMERZZIA_DB_DRIVER: com.mysql.jdbc.Driver
     networks:
-      - comerzzia_42
+      - comerzzia
 
 networks:
-  comerzzia_42:
+  comerzzia:
     external:
-      name: comerzzia42_default
+      name: ${STACK_NAME}_default

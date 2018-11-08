@@ -1,0 +1,34 @@
+version: '2'
+services:
+  db-updater:
+    image: eu.gcr.io/fresh-buffer-203111/contrib/db-updater
+    command: ["import_url"]
+    environment:
+      URL: https://box.comerzzia.com/index.php/s/5RJkiKobEXQrjGN/download
+      DST_DB_HOST: db
+      DST_DB_USER: root
+      DST_DB_PASS: comerzzia
+      VERSION: ${STACK_NAME}
+    networks:
+      - comerzzia
+  data-updater-nonfood:
+    image: docker-repo.tier1.es:5043/contrib/data-updater
+    command: ["import_url"]
+    environment:
+      URL: https://box.comerzzia.com/index.php/s/9J9kSP6xstcxyYx/download
+      DST_DIR: document_library
+    volumes:
+      - ${STACK_NAME}_sol_liferay_data:/mnt
+  data-updater-food:
+    image: docker-repo.tier1.es:5043/contrib/data-updater
+    command: ["import_url"]
+    environment:
+      URL: https://box.comerzzia.com/index.php/s/qQMMZCPyoAKTGJA/download
+      DST_DIR: document_library
+    volumes:
+      - ${STACK_NAME}_sol_food_liferay_data:/mnt
+
+networks:
+  comerzzia:
+    external:
+      name: ${STACK_NAME}_default

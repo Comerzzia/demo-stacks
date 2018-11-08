@@ -1,47 +1,39 @@
 version: '2'
 services:
   apache:
-    image: docker-repo.tier1.es:5043/producto/demo/comerzzia/apache:2.4
+    image: eu.gcr.io/fresh-buffer-203111/producto/demo/comerzzia/apache:2.4
     environment:
-      - APACHE_CONFIG_ENABLED=repositorios
-      - SVN_REPOS=comerzzia
       - APACHE_SITES_ENABLED=app
     ports:
-      - "8080:80"
-    volumes:
-      - comerzzia42_apache_svn:/apps/repositorios/svn
+      - "80:80"
+    restart: always
   backoffice:
-    image: docker-repo.tier1.es:5043/producto/comerzzia/backoffice:4.2.1-SNAPSHOT
+    image: eu.gcr.io/fresh-buffer-203111/producto/comerzzia/${CZZ_VERSION}
     environment:
       COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
       COMERZZIA_DB_DRIVER: mysql
       COMERZZIA_DB_PASS: comerzzia
       COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
       COMERZZIA_DB_USER: comerzzia
+      JAVA_OPTS_MS: '256'
+      JAVA_OPTS_MX: '512'
       SLEEP: 30
+    restart: always
     depends_on:
       - db
       # db:
         # condition: service_healthy
   db:
-    image: docker-repo.tier1.es:5043/producto/base-mariadb:10.1
+    image: eu.gcr.io/fresh-buffer-203111/producto/base-mariadb:10.1
     environment:
       MYSQL_ROOT_PASSWORD: comerzzia
-      OTHER_DB_USERS: comerzzia,cmzportal,cmzportal-food
+      OTHER_DB_USERS: comerzzia,czzsol,czzsol-food,czzpos
+    restart: always
     volumes:
-      - comerzzia42_db_data:/var/lib/mysql
+      - ${STACK_NAME}_db_data:/var/lib/mysql
     # healthcheck:
     #   test: ["CMD", "mysql", "-pcomerzzia", "--host=localhost", "--port=3306", "-e 'SELECT 1'"]
       # interval: 1m30s
       # timeout: 10s
       # retries: 3
       # start_period: 40s
-  db-updater:
-    image: docker-repo.tier1.es:5043/producto/comerzzia/demo/db-updater:4.2
-    environment:
-      DST_DB_HOST: db
-      DST_DB_USER: root
-      DST_DB_PASS: comerzzia
-      VERSION: 4.2
-    depends_on:
-      - db

@@ -1,9 +1,0 @@
-version: '2'
-services:
-  dns:
-    container_name: dns
-    image: docker-repo.tier1.es:5043/contrib/dnsmasq:latest
-    ports:
-      - "53:53/UDP"
-    environment:
-      - DNS_HOSTS=sol.czz.demo.local sol-food.czz.demo.local
