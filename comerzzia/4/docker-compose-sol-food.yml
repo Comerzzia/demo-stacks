@@ -4,12 +4,13 @@ services:
     image: eu.gcr.io/fresh-buffer-203111/producto/comerzzia/${CZZSOL_VERSION}
     environment:
       COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
-      COMERZZIA_DB_DRIVER: mysql
-      COMERZZIA_DB_PASS: comerzzia
       COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
+      COMERZZIA_DB_DRIVER: mysql
       COMERZZIA_DB_USER: comerzzia
-      PORTAL_DB_PASS: czzsol-food
+      COMERZZIA_DB_PASS: comerzzia
       PORTAL_DB_URL: jdbc:mysql://db:3306/czzsol-food
+      PORTAL_DB_DRIVER: mysql
+      PORTAL_DB_PASS: czzsol-food
       PORTAL_DB_USER: czzsol-food
       JAVA_OPTS_MS: '512'
       JAVA_OPTS_MX: '1024'
