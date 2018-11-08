@@ -1,7 +1,7 @@
 [
   {
     "type": 3,
-    "title": "Comerzzia Core (demo)",
+    "title": "comerzzia Core (demo)",
     "description": "Comerzzia demo platform core components",
     "note": "",
     "categories": ["comerzzia"],
@@ -40,7 +40,7 @@
     },
     {
     "type": 3,
-    "title": "Comerzzia SOL (demo)",
+    "title": "comerzzia SOL (demo)",
     "description": "Comerzzia non-food eCommerce demo platform.",
     "note": "",
     "categories": ["comerzzia", "sol"],
@@ -65,7 +65,7 @@
       },
       {
         "name": "CZZSOL_VERSION",
-        "label": "Comerzzia SOL version",
+        "label": "comerzzia SOL version",
         "description": "",
         "select": [
           {
@@ -79,7 +79,7 @@
     },
     {
     "type": 3,
-    "title": "Comerzzia SOL (demo)",
+    "title": "comerzzia SOL (demo)",
     "description": "Comerzzia food eCommerce demo platform.",
     "note": "",
     "categories": ["comerzzia", "sol"],
@@ -118,7 +118,7 @@
     },
     {
     "type": 3,
-    "title": "Comerzzia backoffice OutStore (demo)",
+    "title": "comerzzia backoffice OutStore (demo)",
     "description": "Comerzzia food eCommerce demo platform.",
     "note": "",
     "categories": ["comerzzia", "outstore"],
