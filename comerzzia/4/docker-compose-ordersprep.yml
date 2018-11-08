@@ -1,0 +1,18 @@
+version: '2'
+services:
+  ordersprep:
+    image: eu.gcr.io/fresh-buffer-203111/producto/comerzzia/${CZZORDERSPREP_VERSION}
+    environment:
+      COMERZZIA_ACTIVITY: FOOD
+      COMERZZIA_WEBSERVICES_URL: http://backoffice:8080/comerzzia/ws
+      JAVA_OPTS_MS: '64'
+      JAVA_OPTS_MX: '128'
+      JAVA_OPTS_ADDITIONAL: '-XX:MaxPermSize=256m'
+      SLEEP: 5
+    networks:
+       - comerzzia
+
+networks:
+  comerzzia:
+    external:
+      name: ${STACK_NAME}_default

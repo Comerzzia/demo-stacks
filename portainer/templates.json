@@ -31,7 +31,7 @@
         "select": [
           {
             "text": "4.2.1",
-            "value": "backoffice:4.2.1-SNAPSHOT",
+            "value": "backoffice:4.2.1",
             "default": true
           }
         ]
@@ -70,7 +70,7 @@
         "select": [
           {
             "text": "4.2.1",
-            "value": "sol:4.2.1-SNAPSHOT",
+            "value": "sol:4.2.1",
             "default": true
           }
         ]
@@ -109,7 +109,7 @@
         "select": [
           {
             "text": "4.2.1",
-            "value": "sol-food:4.2.1-SNAPSHOT",
+            "value": "sol-food:4.2.1",
             "default": true
           }
         ]
@@ -148,7 +148,7 @@
         "select": [
           {
             "text": "4.2.1",
-            "value": "outstore:4.2.1-SNAPSHOT",
+            "value": "outstore:4.2.1",
             "default": true
           }
         ]
@@ -181,5 +181,83 @@
       ]
     }
   ]
-}
+  },
+  {
+  "type": 3,
+  "title": "comerzzia Orders Preparation (demo)",
+  "description": "Comerzzia Orders Preparation demo service.",
+  "note": "",
+  "categories": ["comerzzia", "ordersprep"],
+  "platform": "linux",
+  "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
+  "repository": {
+    "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+    "stackfile": "/comerzzia/4/docker-compose-ordersprep.yml"
+  },
+  "env": [
+    {
+      "name": "STACK_NAME",
+      "label": "Stack name",
+      "description": "It must be the same for all the products using the same version.",
+      "select": [
+        {
+          "text": "Comerzzia 4.2",
+          "value": "comerzzia42",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "CZZORDERSPREP_VERSION",
+      "label": "Comerzzia Orders Preparation version",
+      "description": "",
+      "select": [
+        {
+          "text": "0.0.1",
+          "value": "preparacion-pedidos:0.0.1-SNAPSHOT",
+          "default": true
+        }
+      ]
+    }
+  ]
+  },
+  {
+  "type": 3,
+  "title": "comerzzia eTicket (demo)",
+  "description": "Comerzzia eTicket demo service.",
+  "note": "",
+  "categories": ["comerzzia", "eticket"],
+  "platform": "linux",
+  "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
+  "repository": {
+    "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+    "stackfile": "/comerzzia/4/docker-compose-eticket.yml"
+  },
+  "env": [
+    {
+      "name": "STACK_NAME",
+      "label": "Stack name",
+      "description": "It must be the same for all the products using the same version.",
+      "select": [
+        {
+          "text": "Comerzzia 4.2",
+          "value": "comerzzia42",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "CZZETICKET_VERSION",
+      "label": "Comerzzia eTicket version",
+      "description": "",
+      "select": [
+        {
+          "text": "1.0.0",
+          "value": "documento-venta:1.0-SNAPSHOT",
+          "default": true
+        }
+      ]
+    }
+  ]
+  }
 ]

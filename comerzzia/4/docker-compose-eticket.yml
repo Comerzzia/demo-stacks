@@ -1,0 +1,20 @@
+version: '2'
+services:
+  eticket:
+    image: eu.gcr.io/fresh-buffer-203111/producto/comerzzia/${CZZETICKET_VERSION}
+    environment:
+      COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
+      COMERZZIA_DB_PASS: comerzzia
+      COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
+      COMERZZIA_DB_USER: comerzzia
+      JAVA_OPTS_MS: '64'
+      JAVA_OPTS_MX: '128'
+      JAVA_OPTS_ADDITIONAL: '-XX:MaxPermSize=256m'
+      SLEEP: 5
+    networks:
+       - comerzzia
+
+networks:
+  comerzzia:
+    external:
+      name: ${STACK_NAME}_default
