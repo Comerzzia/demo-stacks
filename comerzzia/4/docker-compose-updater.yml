@@ -9,9 +9,10 @@ services:
       DST_DB_USER: root
       DST_DB_PASS: comerzzia
       VERSION: ${STACK_NAME}
-      HOST_IP_ADDRESS:
     networks:
       - comerzzia
+    volumes:
+      - /tmp/host_ip_address:/tmp/host_ip_address
   data-updater-nonfood:
     image: docker-repo.tier1.es:5043/contrib/data-updater
     command: ["import_url"]
