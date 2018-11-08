@@ -1,7 +1,7 @@
 version: '2'
 services:
   sol:
-    image: eu.gcr.io/fresh-buffer-203111/producto/comerzzia/${CZZSOLFOOD_VERSION}
+    image: eu.gcr.io/fresh-buffer-203111/producto/comerzzia/${CZZSOL_VERSION}
     environment:
       COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
       COMERZZIA_DB_DRIVER: mysql
