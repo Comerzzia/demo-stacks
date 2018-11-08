@@ -1,0 +1,14 @@
+version: '2'
+services:
+  portainer:
+    image: portainer/portainer
+    ports:
+      - "9000:9000"
+    labels:
+      portainer.version: "1.19.2"
+      core: "true"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    restart: always
+    command: ["--templates", "http://my-host.my-domain/templates.json", "--hide-label", "core"]

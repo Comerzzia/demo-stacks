@@ -31,6 +31,8 @@ services:
     restart: always
     volumes:
       - ${STACK_NAME}_db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
     # healthcheck:
     #   test: ["CMD", "mysql", "-pcomerzzia", "--host=localhost", "--port=3306", "-e 'SELECT 1'"]
       # interval: 1m30s
