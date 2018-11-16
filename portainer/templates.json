@@ -18,8 +18,8 @@
         "description": "It must be the same for all the products using the same version.",
         "select": [
           {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
+            "text": "Comerzzia 4.6",
+            "value": "comerzzia46",
             "default": true
           }
         ]
@@ -30,8 +30,8 @@
         "description": "",
         "select": [
           {
-            "text": "4.2.1",
-            "value": "backoffice:4.2.1",
+            "text": "4.6.0",
+            "value": "backoffice:4.6.0",
             "default": true
           }
         ]
@@ -57,8 +57,8 @@
         "description": "It must be the same for all the products using the same version.",
         "select": [
           {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
+            "text": "Comerzzia 4.6",
+            "value": "comerzzia46",
             "default": true
           }
         ]
@@ -69,8 +69,8 @@
         "description": "",
         "select": [
           {
-            "text": "4.2.1",
-            "value": "sol:4.2.1",
+            "text": "4.6.0",
+            "value": "sol:4.6.0",
             "default": true
           }
         ]
@@ -79,7 +79,7 @@
     },
     {
     "type": 3,
-    "title": "comerzzia SOL (demo)",
+    "title": "comerzzia SOL-FOOD (demo)",
     "description": "Comerzzia food eCommerce demo platform.",
     "note": "",
     "categories": ["comerzzia", "sol"],
@@ -96,20 +96,20 @@
         "description": "It must be the same for all the products using the same version.",
         "select": [
           {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
+            "text": "Comerzzia 4.6",
+            "value": "comerzzia46",
             "default": true
           }
         ]
       },
       {
         "name": "CZZSOL_VERSION",
-        "label": "Comerzzia SOL version",
+        "label": "Comerzzia SOL-FOOD version",
         "description": "",
         "select": [
           {
-            "text": "4.2.1",
-            "value": "sol-food:4.2.1",
+            "text": "4.6.0",
+            "value": "sol-food:4.6.0",
             "default": true
           }
         ]
@@ -135,8 +135,8 @@
         "description": "It must be the same for all the products using the same version.",
         "select": [
           {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
+            "text": "Comerzzia 4.6",
+            "value": "comerzzia46",
             "default": true
           }
         ]
@@ -147,8 +147,8 @@
         "description": "",
         "select": [
           {
-            "text": "4.2.1",
-            "value": "outstore:4.2.1",
+            "text": "4.6.0",
+            "value": "outstore:4.6.0",
             "default": true
           }
         ]
@@ -174,8 +174,8 @@
       "description": "It must be the same for all the products using the same version.",
       "select": [
         {
-          "text": "Comerzzia 4.2",
-          "value": "comerzzia42",
+          "text": "Comerzzia 4.6",
+          "value": "comerzzia46",
           "default": true
         }
       ]
@@ -201,8 +201,8 @@
       "description": "It must be the same for all the products using the same version.",
       "select": [
         {
-          "text": "Comerzzia 4.2",
-          "value": "comerzzia42",
+          "text": "Comerzzia 4.6",
+          "value": "comerzzia46",
           "default": true
         }
       ]
@@ -240,8 +240,8 @@
       "description": "It must be the same for all the products using the same version.",
       "select": [
         {
-          "text": "Comerzzia 4.2",
-          "value": "comerzzia42",
+          "text": "Comerzzia 4.6",
+          "value": "comerzzia46",
           "default": true
         }
       ]
