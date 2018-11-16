@@ -18,11 +18,10 @@ services:
     ports:
       - "8090:8080"
     volumes:
-      - ${STACK_NAME}_sol_liferay_data:/apps/bin/jboss/standalone/liferay
+      - sol_liferay_data:/apps/bin/jboss/standalone/liferay
     networks:
-       - comerzzia
+       - ${STACK_NAME}_default
 
-networks:
-  comerzzia:
-    external:
-      name: ${STACK_NAME}_default
+volumes:
+   sol_liferay_data:
+      name: sol_liferay_data
