@@ -30,7 +30,7 @@ services:
       OTHER_DB_USERS: comerzzia,czzsol,czzsol-food,czzpos
     restart: always
     volumes:
-      - ${STACK_NAME}_db_data:/var/lib/mysql
+      - db_data:/var/lib/mysql
     ports:
       - "3306:3306"
     # healthcheck:
