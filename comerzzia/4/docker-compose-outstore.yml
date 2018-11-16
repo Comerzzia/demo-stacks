@@ -9,3 +9,6 @@ services:
       COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
     networks:
       - ${STACK_NAME}_default
+
+networks:
+  - ${STACK_NAME}_default      
