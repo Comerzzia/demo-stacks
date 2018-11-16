@@ -7,8 +7,8 @@ services:
       COMERZZIA_DB_USER: comerzzia
       COMERZZIA_DB_PASS: comerzzia
       COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
-    networks:
-      - ${STACK_NAME}_default
 
 networks:
-  ${STACK_NAME}_default:
+  default:
+    external:
+      name: ${STACK_NAME}_default
