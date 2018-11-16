@@ -13,18 +13,6 @@
     },
     "env": [
       {
-        "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.6",
-            "value": "comerzzia46",
-            "default": true
-          }
-        ]
-      },
-      {
         "name": "CZZ_VERSION",
         "label": "Comerzzia version",
         "description": "",
@@ -33,6 +21,10 @@
             "text": "4.6.0",
             "value": "backoffice:4.6.0",
             "default": true
+          },
+          {
+            "text": "4.6.1-SNAPSHOT",
+            "value": "backoffice:4.6.0"
           }
         ]
       }
@@ -53,15 +45,8 @@
     "env": [
       {
         "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.6",
-            "value": "comerzzia46",
-            "default": true
-          }
-        ]
+        "label": "comerzzia CORE Stack name",
+        "description": "Exact name of the comerzzia CORE stack with which it will be linked"
       },
       {
         "name": "CZZSOL_VERSION",
@@ -72,6 +57,10 @@
             "text": "4.6.0",
             "value": "sol:4.6.0",
             "default": true
+          },
+          {
+            "text": "4.6.1-SNAPSHOT",
+            "value": "sol:4.6.1-SNAPSHOT"
           }
         ]
       }
@@ -92,15 +81,8 @@
     "env": [
       {
         "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.6",
-            "value": "comerzzia46",
-            "default": true
-          }
-        ]
+        "label": "comerzzia CORE Stack name",
+        "description": "Exact name of the comerzzia CORE stack with which it will be linked"
       },
       {
         "name": "CZZSOL_VERSION",
@@ -111,6 +93,10 @@
             "text": "4.6.0",
             "value": "sol-food:4.6.0",
             "default": true
+          },
+          {
+            "text": "4.6.1-SNAPSHOT",
+            "value": "sol-food:4.6.1-SNAPSHOT"
           }
         ]
       }
@@ -131,15 +117,8 @@
     "env": [
       {
         "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.6",
-            "value": "comerzzia46",
-            "default": true
-          }
-        ]
+        "label": "comerzzia CORE Stack name",
+        "description": "Exact name of the comerzzia CORE stack with which it will be linked"
       },
       {
         "name": "CZZOUTSTORE_VERSION",
@@ -150,6 +129,10 @@
             "text": "4.6.0",
             "value": "outstore:4.6.0",
             "default": true
+          },
+          {
+            "text": "4.6.1-SNAPSHOT",
+            "value": "outstore:4.6.1-SNAPSHOT"
           }
         ]
       }
@@ -170,15 +153,8 @@
   "env": [
     {
       "name": "STACK_NAME",
-      "label": "Stack name",
-      "description": "It must be the same for all the products using the same version.",
-      "select": [
-        {
-          "text": "Comerzzia 4.6",
-          "value": "comerzzia46",
-          "default": true
-        }
-      ]
+      "label": "comerzzia CORE Stack name",
+      "description": "Exact name of the comerzzia CORE stack with which it will be linked"
     }
   ]
   },
@@ -196,16 +172,9 @@
   },
   "env": [
     {
-      "name": "STACK_NAME",
-      "label": "Stack name",
-      "description": "It must be the same for all the products using the same version.",
-      "select": [
-        {
-          "text": "Comerzzia 4.6",
-          "value": "comerzzia46",
-          "default": true
-        }
-      ]
+        "name": "STACK_NAME",
+        "label": "comerzzia CORE Stack name",
+        "description": "Exact name of the comerzzia CORE stack with which it will be linked"
     },
     {
       "name": "CZZORDERSPREP_VERSION",
@@ -235,16 +204,9 @@
   },
   "env": [
     {
-      "name": "STACK_NAME",
-      "label": "Stack name",
-      "description": "It must be the same for all the products using the same version.",
-      "select": [
-        {
-          "text": "Comerzzia 4.6",
-          "value": "comerzzia46",
-          "default": true
-        }
-      ]
+        "name": "STACK_NAME",
+        "label": "comerzzia CORE Stack name",
+        "description": "Exact name of the comerzzia CORE stack with which it will be linked"
     },
     {
       "name": "CZZETICKET_VERSION",
