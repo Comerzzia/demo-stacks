@@ -11,4 +11,4 @@ services:
       - ${STACK_NAME}_default
 
 networks:
-  - ${STACK_NAME}_default      
+  - ${STACK_NAME}_default:
