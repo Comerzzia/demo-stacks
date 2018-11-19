@@ -18,6 +18,7 @@ services:
     command: ["import_url"]
     environment:
       URL: https://box.comerzzia.com/index.php/s/9J9kSP6xstcxyYx/download
+      MAP_UID: 10001
       DST_DIR:
     volumes:
       - ${STACK_NAME}_sol_liferay_data:/mnt
@@ -26,6 +27,7 @@ services:
     command: ["import_url"]
     environment:
       URL: https://box.comerzzia.com/index.php/s/qQMMZCPyoAKTGJA/download
+      MAP_UID: 10001
       DST_DIR:
     volumes:
       - ${STACK_NAME}_sol_food_liferay_data:/mnt
