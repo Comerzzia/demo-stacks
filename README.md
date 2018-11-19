@@ -1,2 +1,2 @@
-## Repositorio para stacks de Docker de entornos demo
+## Repository for demo stacks on Docker
 ---
