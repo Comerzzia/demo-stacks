@@ -1,8 +1,8 @@
 [
   {
     "type": 3,
-    "title": "comerzzia Core (demo)",
-    "description": "Comerzzia demo platform core components",
+    "title": "comerzzia CORE",
+    "description": "comerzzia platform core components (backoffice & database)",
     "note": "",
     "categories": ["comerzzia"],
     "platform": "linux",
@@ -13,26 +13,18 @@
     },
     "env": [
       {
-        "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
-            "default": true
-          }
-        ]
-      },
-      {
         "name": "CZZ_VERSION",
         "label": "Comerzzia version",
         "description": "",
         "select": [
           {
-            "text": "4.2.1",
-            "value": "backoffice:4.2.1",
+            "text": "4.6.0",
+            "value": "backoffice:4.6.0",
             "default": true
+          },
+          {
+            "text": "4.6.1-SNAPSHOT",
+            "value": "backoffice:4.6.0"
           }
         ]
       }
@@ -40,8 +32,8 @@
     },
     {
     "type": 3,
-    "title": "comerzzia SOL (demo)",
-    "description": "Comerzzia non-food eCommerce demo platform.",
+    "title": "comerzzia SOL",
+    "description": "comerzzia eCommerce platform for non-food",
     "note": "",
     "categories": ["comerzzia", "sol"],
     "platform": "linux",
@@ -53,15 +45,8 @@
     "env": [
       {
         "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
-            "default": true
-          }
-        ]
+        "label": "comerzzia CORE Stack name",
+        "description": "Exact name of the comerzzia CORE stack with which it will be linked"
       },
       {
         "name": "CZZSOL_VERSION",
@@ -69,9 +54,13 @@
         "description": "",
         "select": [
           {
-            "text": "4.2.1",
-            "value": "sol:4.2.1",
+            "text": "4.6.0",
+            "value": "sol:4.6.0",
             "default": true
+          },
+          {
+            "text": "4.6.1-SNAPSHOT",
+            "value": "sol:4.6.1-SNAPSHOT"
           }
         ]
       }
@@ -79,8 +68,8 @@
     },
     {
     "type": 3,
-    "title": "comerzzia SOL (demo)",
-    "description": "Comerzzia food eCommerce demo platform.",
+    "title": "comerzzia SOL-FOOD",
+    "description": "comerzzia eCommerce platform for food",
     "note": "",
     "categories": ["comerzzia", "sol"],
     "platform": "linux",
@@ -92,25 +81,22 @@
     "env": [
       {
         "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
-            "default": true
-          }
-        ]
+        "label": "comerzzia CORE Stack name",
+        "description": "Exact name of the comerzzia CORE stack with which it will be linked"
       },
       {
         "name": "CZZSOL_VERSION",
-        "label": "Comerzzia SOL version",
+        "label": "Comerzzia SOL-FOOD version",
         "description": "",
         "select": [
           {
-            "text": "4.2.1",
-            "value": "sol-food:4.2.1",
+            "text": "4.6.0",
+            "value": "sol-food:4.6.0",
             "default": true
+          },
+          {
+            "text": "4.6.1-SNAPSHOT",
+            "value": "sol-food:4.6.1-SNAPSHOT"
           }
         ]
       }
@@ -118,8 +104,8 @@
     },
     {
     "type": 3,
-    "title": "comerzzia backoffice OutStore (demo)",
-    "description": "Comerzzia food eCommerce demo platform.",
+    "title": "comerzzia backoffice OutStore",
+    "description": "comerzzia backoffice services for stores (inventory)",
     "note": "",
     "categories": ["comerzzia", "outstore"],
     "platform": "linux",
@@ -131,15 +117,8 @@
     "env": [
       {
         "name": "STACK_NAME",
-        "label": "Stack name",
-        "description": "It must be the same for all the products using the same version.",
-        "select": [
-          {
-            "text": "Comerzzia 4.2",
-            "value": "comerzzia42",
-            "default": true
-          }
-        ]
+        "label": "comerzzia CORE Stack name",
+        "description": "Exact name of the comerzzia CORE stack with which it will be linked"
       },
       {
         "name": "CZZOUTSTORE_VERSION",
@@ -147,9 +126,13 @@
         "description": "",
         "select": [
           {
-            "text": "4.2.1",
-            "value": "outstore:4.2.1",
+            "text": "4.6.0",
+            "value": "outstore:4.6.0",
             "default": true
+          },
+          {
+            "text": "4.6.1-SNAPSHOT",
+            "value": "outstore:4.6.1-SNAPSHOT"
           }
         ]
       }
@@ -157,9 +140,9 @@
   },
   {
   "type": 3,
-  "title": "comerzzia data updater (demo)",
-  "description": "Comerzzia data updater for demo platform.",
-  "note": "",
+  "title": "comerzzia DEMO environment data updater",
+  "description": "This container updates a comerzzia installation with the default data for a demonstration environment",
+  "note": "Use an environment variable with the URL where there is a zip file with the demostration data. This URL allows you to load different data sets in the demo environment.",
   "categories": ["comerzzia", "updater"],
   "platform": "linux",
   "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
@@ -170,15 +153,8 @@
   "env": [
     {
       "name": "STACK_NAME",
-      "label": "Stack name",
-      "description": "It must be the same for all the products using the same version.",
-      "select": [
-        {
-          "text": "Comerzzia 4.2",
-          "value": "comerzzia42",
-          "default": true
-        }
-      ]
+      "label": "comerzzia CORE Stack name",
+      "description": "Exact name of the comerzzia CORE stack with which it will be linked"
     }
   ]
   },
@@ -186,7 +162,7 @@
   "type": 3,
   "title": "comerzzia Orders Preparation (demo)",
   "description": "Comerzzia Orders Preparation demo service.",
-  "note": "",
+  "note": "It is designed to be executed on mobile devices with a simple web browser.",
   "categories": ["comerzzia", "ordersprep"],
   "platform": "linux",
   "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
@@ -196,16 +172,9 @@
   },
   "env": [
     {
-      "name": "STACK_NAME",
-      "label": "Stack name",
-      "description": "It must be the same for all the products using the same version.",
-      "select": [
-        {
-          "text": "Comerzzia 4.2",
-          "value": "comerzzia42",
-          "default": true
-        }
-      ]
+        "name": "STACK_NAME",
+        "label": "comerzzia CORE Stack name",
+        "description": "Exact name of the comerzzia CORE stack with which it will be linked"
     },
     {
       "name": "CZZORDERSPREP_VERSION",
@@ -235,16 +204,9 @@
   },
   "env": [
     {
-      "name": "STACK_NAME",
-      "label": "Stack name",
-      "description": "It must be the same for all the products using the same version.",
-      "select": [
-        {
-          "text": "Comerzzia 4.2",
-          "value": "comerzzia42",
-          "default": true
-        }
-      ]
+        "name": "STACK_NAME",
+        "label": "comerzzia CORE Stack name",
+        "description": "Exact name of the comerzzia CORE stack with which it will be linked"
     },
     {
       "name": "CZZETICKET_VERSION",
