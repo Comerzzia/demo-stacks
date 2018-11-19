@@ -8,7 +8,7 @@
     "platform": "linux",
     "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
     "repository": {
-      "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+      "url": "https://github.com/Comerzzia/demo-stacks.git",
       "stackfile": "/comerzzia/4/docker-compose-core.yml"
     },
     "env": [
@@ -47,7 +47,7 @@
     "platform": "linux",
     "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
     "repository": {
-      "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+      "url": "https://github.com/Comerzzia/demo-stacks.git",
       "stackfile": "/comerzzia/4/docker-compose-sol.yml"
     },
     "env": [
@@ -86,7 +86,7 @@
     "platform": "linux",
     "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
     "repository": {
-      "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+      "url": "https://github.com/Comerzzia/demo-stacks.git",
       "stackfile": "/comerzzia/4/docker-compose-sol-food.yml"
     },
     "env": [
@@ -125,7 +125,7 @@
     "platform": "linux",
     "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
     "repository": {
-      "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+      "url": "https://github.com/Comerzzia/demo-stacks.git",
       "stackfile": "/comerzzia/4/docker-compose-outstore.yml"
     },
     "env": [
@@ -164,7 +164,7 @@
   "platform": "linux",
   "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
   "repository": {
-    "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+    "url": "https://github.com/Comerzzia/demo-stacks.git",
     "stackfile": "/comerzzia/4/docker-compose-updater.yml"
   },
   "env": [
@@ -191,7 +191,7 @@
   "platform": "linux",
   "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
   "repository": {
-    "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+    "url": "https://github.com/Comerzzia/demo-stacks.git",
     "stackfile": "/comerzzia/4/docker-compose-ordersprep.yml"
   },
   "env": [
@@ -230,7 +230,7 @@
   "platform": "linux",
   "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
   "repository": {
-    "url": "https://gitlab.des.tier1.es/docker/demo-stacks.git",
+    "url": "https://github.com/Comerzzia/demo-stacks.git",
     "stackfile": "/comerzzia/4/docker-compose-eticket.yml"
   },
   "env": [
