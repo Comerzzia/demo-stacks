@@ -1,7 +1,7 @@
 version: '2'
 services:
   backoffice-outstore:
-    image: docker-repo.tier1.es:5043/producto/comerzzia/${CZZOUTSTORE_VERSION}
+    image: eu.gcr.io/fresh-buffer-203111/producto/comerzzia/${CZZOUTSTORE_VERSION}
     environment:
       COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
       COMERZZIA_DB_USER: comerzzia
