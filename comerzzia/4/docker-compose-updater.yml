@@ -14,7 +14,7 @@ services:
     volumes:
       - /tmp/host_ip_address:/tmp/host_ip_address
   data-updater-nonfood:
-    image: docker-repo.tier1.es:5043/contrib/data-updater
+    image: eu.gcr.io/fresh-buffer-203111/contrib/data-updater
     command: ["import_url"]
     environment:
       URL: https://box.comerzzia.com/index.php/s/9J9kSP6xstcxyYx/download
@@ -23,7 +23,7 @@ services:
     volumes:
       - ${STACK_NAME}_sol_liferay_data:/mnt
   data-updater-food:
-    image: docker-repo.tier1.es:5043/contrib/data-updater
+    image: eu.gcr.io/fresh-buffer-203111/contrib/data-updater
     command: ["import_url"]
     environment:
       URL: https://box.comerzzia.com/index.php/s/qQMMZCPyoAKTGJA/download
