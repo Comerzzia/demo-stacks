@@ -13,16 +13,16 @@ services:
       PORTAL_DB_PASS: czzsol
       PORTAL_DB_USER: czzsol
       JAVA_OPTS_MS: '512'
-      JAVA_OPTS_MX: '1024'
+      JAVA_OPTS_MX: ${CZZ_MEMORY}
       SLEEP: 30
     ports:
       - "8090:8080"
     volumes:
-      - ${STACK_NAME}_sol_liferay_data:/apps/bin/jboss/standalone/liferay
+      - ${CZZ_CORE_STACK_NAME}_sol_liferay_data:/apps/bin/jboss/standalone/liferay
     networks:
        - comerzzia
 
 networks:
   comerzzia:
     external:
-      name: ${STACK_NAME}_default
+      name: ${CZZ_CORE_STACK_NAME}_default
