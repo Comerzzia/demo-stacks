@@ -16,7 +16,7 @@ services:
       COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
       COMERZZIA_DB_USER: comerzzia
       JAVA_OPTS_MS: '256'
-      JAVA_OPTS_MX: '512'
+      JAVA_OPTS_MX: ${CZZ_MEMORY}
       SLEEP: 30
     restart: always
     depends_on:
