@@ -7,6 +7,8 @@ services:
     ports:
       - "80:80"
     restart: always
+    volumes:
+      - www_data:/var/www/html
   backoffice:
     image: eu.gcr.io/fresh-buffer-203111/producto/comerzzia/${CZZ_VERSION}
     environment:
@@ -39,7 +41,19 @@ services:
       # timeout: 10s
       # retries: 3
       # start_period: 40s
+  www-data-updater:
+    image: eu.gcr.io/fresh-buffer-203111/contrib/data-updater
+    command: ["import_url"]
+    environment:
+      URL: https://box.comerzzia.com/index.php/s/3yyHEycjWFxKZGj/download
+      MAP_UID:
+      DST_DIR:
+    volumes:
+      - www_data:/mnt
+
       
 volumes:
    db_data:
       name: db_data
+   www_data:
+      name: www_data
