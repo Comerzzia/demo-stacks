@@ -8,7 +8,7 @@ services:
       COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
       COMERZZIA_DB_USER: comerzzia
       JAVA_OPTS_MS: '64'
-      JAVA_OPTS_MX: '128'
+      JAVA_OPTS_MX: ${CZZ_MEMORY}
       JAVA_OPTS_ADDITIONAL: '-XX:MaxPermSize=256m'
       SLEEP: 5
     networks:
@@ -17,4 +17,4 @@ services:
 networks:
   comerzzia:
     external:
-      name: ${STACK_NAME}_default
+      name: ${CZZ_CORE_STACK_NAME}_default
