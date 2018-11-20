@@ -267,7 +267,7 @@
   },
   {
   "type": 3,
-  "title": "comerzzia Orders Preparation (demo)",
+  "title": "comerzzia Orders Preparation",
   "description": "Comerzzia Orders Preparation demo service.",
   "note": "It is designed to be executed on mobile devices with a simple web browser.",
   "categories": ["comerzzia", "ordersprep"],
