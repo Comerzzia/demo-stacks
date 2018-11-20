@@ -8,7 +8,7 @@ services:
       DST_DB_HOST: db
       DST_DB_USER: root
       DST_DB_PASS: comerzzia
-      VERSION: ${STACK_NAME}
+      VERSION: ${CZZ_CORE_STACK_NAME}
     networks:
       - comerzzia
     volumes:
@@ -21,7 +21,7 @@ services:
       MAP_UID: 10001
       DST_DIR:
     volumes:
-      - ${STACK_NAME}_sol_liferay_data:/mnt
+      - ${CZZ_CORE_STACK_NAME}_sol_liferay_data:/mnt
   data-updater-food:
     image: eu.gcr.io/fresh-buffer-203111/contrib/data-updater
     command: ["import_url"]
@@ -30,9 +30,9 @@ services:
       MAP_UID: 10001
       DST_DIR:
     volumes:
-      - ${STACK_NAME}_sol_food_liferay_data:/mnt
+      - ${CZZ_CORE_STACK_NAME}_sol_food_liferay_data:/mnt
 
 networks:
   comerzzia:
     external:
-      name: ${STACK_NAME}_default
+      name: ${CZZ_CORE_STACK_NAME}_default
