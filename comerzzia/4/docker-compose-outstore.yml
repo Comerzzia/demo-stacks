@@ -7,11 +7,12 @@ services:
       COMERZZIA_DB_USER: comerzzia
       COMERZZIA_DB_PASS: comerzzia
       COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
+      JAVA_OPTS: -Dvaadin.servlet.productionMode=true -XX:MaxRAM=${CZZ_MEMORY}m
     networks:
       - comerzzia
 
 networks:
   comerzzia:
     external:
-      name: ${STACK_NAME}_default
+      name: ${CZZ_CORE_STACK_NAME}_default
 
