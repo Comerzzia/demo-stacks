@@ -1,9 +1,9 @@
 [
   {
     "type": 3,
-    "title": "comerzzia CORE",
-    "description": "comerzzia platform core components (Apache, backoffice y MariaDB database)",
-    "note": "",
+    "title": "comerzzia CORE (Sales Orchestrator)",
+    "description": "comerzzia omnichannel platform core components (Web server, Sales Orchestrator and MariaDB database)",
+    "note": "The CORE components of comerzzia omnichannel platform",
     "categories": ["comerzzia"],
     "platform": "linux",
     "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
