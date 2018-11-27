@@ -1,5 +1,14 @@
 version: '2'
 services:
+  www-data-updater:
+    image: eu.gcr.io/fresh-buffer-203111/contrib/data-updater
+    command: ["import_url"]
+    environment:
+      URL: https://demo:jUrWdTp6VeTCIZnmlf1YxBaeJi0vB8@repo.saas.comerzzia.com/repositorios/CZZ_DEMO/4.6.1/www-data-demo/www-data-demo.zip
+      MAP_UID:
+      DST_DIR:
+    volumes:
+      - ${CZZ_CORE_STACK_NAME}_www_data:/mnt
   db-updater:
     image: eu.gcr.io/fresh-buffer-203111/contrib/db-updater
     command: ["import_url"]
