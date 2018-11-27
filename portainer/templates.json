@@ -263,46 +263,6 @@
   },
   {
   "type": 3,
-  "title": "comerzzia DEMO environment data updater",
-  "description": "This container replace a comerzzia installation (database & multimedia data) with the default data for a demonstration environment",
-  "note": "ATTENTION. This updater completely replaces the database, so you will lose the information you currently have. The backoffice service has to be stopped for the process to finish correctly. Every container use an environment variable with the URL where there is a zip file with the demostration data. This URL allows you to load different data sets in the demo environment.",
-  "categories": ["comerzzia", "updater"],
-  "platform": "linux",
-  "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
-  "repository": {
-    "url": "https://github.com/Comerzzia/demo-stacks.git",
-    "stackfile": "/comerzzia/4/docker-compose-updater.yml"
-  },
-  "env": [
-    {
-	"name": "CZZ_DEMO_VERSION",
-	"label": "comerzzia version for demo data",
-	"description": "",
-	"select": [
-	    {
-	  	  "text": "4.6.0",
-		  "value": "4.6.0"
-	    },
-	    {
-		  "text": "4.6.1",
-		  "value": "4.6.1",
-	  	  "default": true
-	    },
-	    {
-		  "text": "4.6.2-SNAPSHOT",
-  		  "value": "4.6.2-SNAPSHOT"
-   	    }
-  	  ]
-    },
-    {
-      "name": "CZZ_CORE_STACK_NAME",
-      "label": "comerzzia CORE Stack name",
-      "description": "Exact name of the comerzzia CORE stack with which it will be linked"
-    }
-  ]
-  },
-  {
-  "type": 3,
   "title": "comerzzia Orders Preparation",
   "description": "Comerzzia Orders Preparation demo service.",
   "note": "It is designed to be executed on mobile devices with a simple web browser.",
@@ -355,9 +315,9 @@
   },
   {
   "type": 3,
-  "title": "comerzzia eTicket (demo)",
-  "description": "Comerzzia eTicket demo service.",
-  "note": "comerzzia eticket demo service web version",
+  "title": "comerzzia eTicket (mockup)",
+  "description": "Comerzzia eTicket mockup demo service.",
+  "note": "comerzzia eticket mockup demo service web version",
   "categories": ["comerzzia", "eticket"],
   "platform": "linux",
   "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
@@ -403,6 +363,46 @@
           }
         ]
       }
+  ]
+  },
+  {
+  "type": 3,
+  "title": "comerzzia DEMO environment data updater",
+  "description": "This container replace a comerzzia installation (database & multimedia data) with the default data for a demonstration environment",
+  "note": "ATTENTION. This updater completely replaces the database, so you will lose the information you currently have. The backoffice service has to be stopped for the process to finish correctly. Every container use an environment variable with the URL where there is a zip file with the demostration data. This URL allows you to load different data sets in the demo environment.",
+  "categories": ["comerzzia", "updater"],
+  "platform": "linux",
+  "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
+  "repository": {
+    "url": "https://github.com/Comerzzia/demo-stacks.git",
+    "stackfile": "/comerzzia/4/docker-compose-updater.yml"
+  },
+  "env": [
+    {
+	"name": "CZZ_DEMO_VERSION",
+	"label": "comerzzia version for demo data",
+	"description": "",
+	"select": [
+	    {
+	  	  "text": "4.6.0",
+		  "value": "4.6.0"
+	    },
+	    {
+		  "text": "4.6.1",
+		  "value": "4.6.1",
+	  	  "default": true
+	    },
+	    {
+		  "text": "4.6.2-SNAPSHOT",
+  		  "value": "4.6.2-SNAPSHOT"
+   	    }
+  	  ]
+    },
+    {
+      "name": "CZZ_CORE_STACK_NAME",
+      "label": "comerzzia CORE Stack name",
+      "description": "Exact name of the comerzzia CORE stack with which it will be linked"
+    }
   ]
   }
 ]
