@@ -13,7 +13,7 @@ services:
     image: eu.gcr.io/fresh-buffer-203111/contrib/db-updater
     command: ["import_url"]
     environment:
-      URL: https://demo:jUrWdTp6VeTCIZnmlf1YxBaeJi0vB8@repo.saas.comerzzia.com/repositorios/CZZ_DEMO/${CZZ_VERSION}/demo-data/db.zip
+      URL: https://demo:jUrWdTp6VeTCIZnmlf1YxBaeJi0vB8@repo.saas.comerzzia.com/repositorios/CZZ_DEMO/${CZZ_DEMO_VERSION}/demo-data/db.zip
       DST_DB_HOST: db
       DST_DB_USER: root
       DST_DB_PASS: comerzzia
@@ -26,7 +26,7 @@ services:
     image: eu.gcr.io/fresh-buffer-203111/contrib/data-updater
     command: ["import_url"]
     environment:
-      URL: https://demo:jUrWdTp6VeTCIZnmlf1YxBaeJi0vB8@repo.saas.comerzzia.com/repositorios/CZZ_DEMO/${CZZ_VERSION}/demo-data/sol-document-library.zip
+      URL: https://demo:jUrWdTp6VeTCIZnmlf1YxBaeJi0vB8@repo.saas.comerzzia.com/repositorios/CZZ_DEMO/${CZZ_DEMO_VERSION}/demo-data/sol-document-library.zip
       MAP_UID: 10001
       DST_DIR:
     volumes:
@@ -35,7 +35,7 @@ services:
     image: eu.gcr.io/fresh-buffer-203111/contrib/data-updater
     command: ["import_url"]
     environment:
-      URL: https://demo:jUrWdTp6VeTCIZnmlf1YxBaeJi0vB8@repo.saas.comerzzia.com/repositorios/CZZ_DEMO/${CZZ_VERSION}/demo-data/sol-food-document-library.zip
+      URL: https://demo:jUrWdTp6VeTCIZnmlf1YxBaeJi0vB8@repo.saas.comerzzia.com/repositorios/CZZ_DEMO/${CZZ_DEMO_VERSION}/demo-data/sol-food-document-library.zip
       MAP_UID: 10001
       DST_DIR:
     volumes:

@@ -275,7 +275,7 @@
   },
   "env": [
     {
-	"name": "CZZ_VERSION",
+	"name": "CZZ_DEMO_VERSION",
 	"label": "comerzzia version for demo data",
 	"description": "",
 	"select": [
