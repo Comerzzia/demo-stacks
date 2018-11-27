@@ -275,6 +275,26 @@
   },
   "env": [
     {
+	"name": "CZZ_VERSION",
+	"label": "comerzzia version for demo data",
+	"description": "",
+	"select": [
+	    {
+	  	  "text": "4.6.0",
+		  "value": "4.6.0"
+	    },
+	    {
+		  "text": "4.6.1",
+		  "value": "4.6.1",
+	  	  "default": true
+	    },
+	    {
+		  "text": "4.6.2-SNAPSHOT",
+  		  "value": "4.6.2-SNAPSHOT"
+   	    }
+  	  ]
+    },
+    {
       "name": "CZZ_CORE_STACK_NAME",
       "label": "comerzzia CORE Stack name",
       "description": "Exact name of the comerzzia CORE stack with which it will be linked"
