@@ -4,7 +4,7 @@
     "title": "comerzzia CORE (Sales Orchestrator)",
     "description": "comerzzia omnichannel platform core components (Web server, Sales Orchestrator and MariaDB database)",
     "note": "The CORE components of comerzzia omnichannel platform",
-    "categories": ["comerzzia"],
+    "categories": ["comerzzia", "core"],
     "platform": "linux",
     "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
     "repository": {
@@ -38,29 +38,29 @@
         "description": "",
         "select": [
           {
-            "text": "XS (256 test porpuse)",
+            "text": "XS (256mb test porpuse)",
             "value": "256"
           },
           {
-            "text": "S (512 test porpuse)",
+            "text": "S (512mb test porpuse)",
             "value": "512"
           },
           {
-            "text": "M (1024 minimum recommended)",
+            "text": "M (1gb minimum recommended)",
             "value": "1024",
             "default": true
           },
           {
-            "text": "XL (2048)",
+            "text": "XL (2gb)",
             "value": "2048"
           },
           {
-            "text": "XXL (4096)",
+            "text": "XXL (4gb)",
             "value": "4096"
           }
           ,
           {
-            "text": "XXXL (8192)",
+            "text": "XXXL (8gb)",
             "value": "8192"
           }
         ]
@@ -111,21 +111,21 @@
         "description": "",
         "select": [
           {
-            "text": "M (1024 minimum recommended)",
+            "text": "M (1gb minimum recommended)",
             "value": "1024",
             "default": true
           },
           {
-            "text": "XL (2048)",
+            "text": "XL (2gb)",
             "value": "2048"
           },
           {
-            "text": "XXL (4096)",
+            "text": "XXL (4gb)",
             "value": "4096"
           }
           ,
           {
-            "text": "XXXL (8192)",
+            "text": "XXXL (8gb)",
             "value": "8192"
           }
         ]
@@ -176,21 +176,21 @@
         "description": "",
         "select": [
           {
-            "text": "M (1024 minimum recommended)",
+            "text": "M (1gb minimum recommended)",
             "value": "1024",
             "default": true
           },
           {
-            "text": "XL (2048)",
+            "text": "XL (2gb)",
             "value": "2048"
           },
           {
-            "text": "XXL (4096)",
+            "text": "XXL (4gb)",
             "value": "4096"
           }
           ,
           {
-            "text": "XXXL (8192)",
+            "text": "XXXL (8gb)",
             "value": "8192"
           }
         ]
@@ -241,20 +241,20 @@
         "description": "",
         "select": [
           {
-            "text": "S (256 test porpuse)",
+            "text": "S (256mb test porpuse)",
             "value": "256"
           },
           {
-            "text": "M (512 minimum recommended)",
+            "text": "M (512mb minimum recommended)",
             "value": "512",
             "default": true
           },
           {
-            "text": "XL (1024)",
+            "text": "XL (1gb)",
             "value": "1024"
           },
           {
-            "text": "XXL (2048)",
+            "text": "XXL (2gb)",
             "value": "2048"
           }
         ]
@@ -297,16 +297,16 @@
         "description": "",
         "select": [
           {
-            "text": "M (128 minimum recommended)",
+            "text": "M (128mb minimum recommended)",
             "value": "128",
             "default": true
           },
           {
-            "text": "XL (256)",
+            "text": "XL (256mb)",
             "value": "256"
           },
           {
-            "text": "XXL (1024)",
+            "text": "XXL (1gb)",
             "value": "1024"
           }
         ]
@@ -349,16 +349,16 @@
         "description": "",
         "select": [
           {
-            "text": "M (128 minimum recommended)",
+            "text": "M (128mb minimum recommended)",
             "value": "128",
             "default": true
           },
           {
-            "text": "XL (256)",
+            "text": "XL (256mb)",
             "value": "256"
           },
           {
-            "text": "XXL (1024)",
+            "text": "XXL (1gb)",
             "value": "1024"
           }
         ]
