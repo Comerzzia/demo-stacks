@@ -4,7 +4,7 @@ services:
     image: eu.gcr.io/fresh-buffer-203111/contrib/data-updater
     command: ["import_url"]
     environment:
-      URL: https://demo:jUrWdTp6VeTCIZnmlf1YxBaeJi0vB8@repo.saas.comerzzia.com/repositorios/CZZ_DEMO/${CZZ_VERSION}/demo-www/demo-www.zip
+      URL: https://demo:jUrWdTp6VeTCIZnmlf1YxBaeJi0vB8@repo.saas.comerzzia.com/repositorios/CZZ_DEMO/${CZZ_DEMO_VERSION}/demo-www/demo-www.zip
       MAP_UID:
       DST_DIR:
     volumes:
