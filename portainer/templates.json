@@ -25,10 +25,6 @@
             "text": "4.6.1",
             "value": "backoffice:4.6.1",
             "default": true
-          },
-          {
-            "text": "4.6.2-SNAPSHOT",
-            "value": "backoffice:4.6.2-SNAPSHOT"
           }
         ]
       },
@@ -98,10 +94,6 @@
             "text": "4.6.1",
             "value": "sol:4.6.1",
             "default": true
-          },
-          {
-            "text": "4.6.2-SNAPSHOT",
-            "value": "sol:4.6.2-SNAPSHOT"
           }
         ]
       },
@@ -163,10 +155,6 @@
             "text": "4.6.1",
             "value": "sol-food:4.6.1",
             "default": true
-          },
-          {
-            "text": "4.6.2-SNAPSHOT",
-            "value": "sol-food:4.6.2-SNAPSHOT"
           }
         ]
       },
@@ -228,10 +216,6 @@
             "text": "4.6.1",
             "value": "outstore:4.6.1",
             "default": true
-          },
-          {
-            "text": "4.6.2-SNAPSHOT",
-            "value": "outstore:4.6.2-SNAPSHOT"
           }
         ]
       },
@@ -391,11 +375,7 @@
 		  "text": "4.6.1",
 		  "value": "4.6.1",
 	  	  "default": true
-	    },
-	    {
-		  "text": "4.6.2-SNAPSHOT",
-  		  "value": "4.6.2-SNAPSHOT"
-   	    }
+	    }
   	  ]
     },
     {
