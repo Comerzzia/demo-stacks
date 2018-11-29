@@ -369,7 +369,7 @@
   "type": 3,
   "title": "comerzzia DEMO environment data updater",
   "description": "This container replace a comerzzia installation (database & multimedia data) with the default data for a demonstration environment",
-  "note": "ATTENTION. This updater completely replaces the database, so you will lose the information you currently have. The backoffice service has to be stopped for the process to finish correctly. Every container use an environment variable with the URL where there is a zip file with the demostration data. This URL allows you to load different data sets in the demo environment.",
+  "note": "<b>ATTENTION:</b> This updater completely replaces the database, so you will lose the information you currently have.<br/><b>comerzzia services (backoffice, SOL) mast be stopped before launch the updater</b>.<br/>Every container use an environment variable with the URL where there is a zip file with the demostration data. This URL allows you to load different data sets in the demo environment.",
   "categories": ["comerzzia", "updater"],
   "platform": "linux",
   "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
