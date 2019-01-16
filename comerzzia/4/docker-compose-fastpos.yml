@@ -1,0 +1,28 @@
+version: '2'
+services:
+  eticket:
+    image: eu.gcr.io/fresh-buffer-203111/producto/comerzzia/${CZZFASTPOS_VERSION}
+    environment:
+      COMERZZIA_DB_DRIVER: mysql
+      COMERZZIA_DB_CLASS: com.mysql.jdbc.Driver
+      COMERZZIA_DB_PASS: comerzzia
+      COMERZZIA_DB_URL: jdbc:mysql://db:3306/comerzzia
+      COMERZZIA_DB_USER: comerzzia
+      JAVA_OPTS_MS: '64'
+      JAVA_OPTS_MX: ${CZZ_MEMORY}
+      JAVA_OPTS_ADDITIONAL: '-XX:MaxPermSize=128m'
+      COMERZZIA_UID_INSTANCIA: THARSIS	
+      COMERZZIA_UID_ACTIVIDAD: NON-FOOD	
+      COMERZZIA_CODEMP: 0100	
+      COMERZZIA_CODALM: 90	
+      COMERZZIA_CODCAJA: 00	
+      COMERZZIA_ESCAPARATE_URL:	http://demo.comerzzia.com/portal/delegate/list?companyId=549266\&amp;groupId=549291\&amp;ClassId=EscaparateFastPOS\&amp;ObjectId=	
+      COMERZZIA_IMAGENES_URL: http://demo.comerzzia.com/portal/delegate/list?companyId=549266\&amp;groupId=549291\&amp;ClassId=articulos\&amp;ObjectId=	
+      SLEEP: 5
+    networks:
+       - comerzzia
+
+networks:
+  comerzzia:
+    external:
+      name: ${CZZ_CORE_STACK_NAME}_default

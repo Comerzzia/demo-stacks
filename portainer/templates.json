@@ -351,6 +351,58 @@
   },
   {
   "type": 3,
+  "title": "comerzzia FastPOS DEMO (mockup)",
+  "description": "Comerzzia FastPOS mockup demo service.",
+  "note": "comerzzia FastPOS mockup demo service web version",
+  "categories": ["comerzzia", "FastPOS"],
+  "platform": "linux",
+  "logo": "https://www.comerzzia.com/comerzzia-theme-portal/images/favicon.ico",
+  "repository": {
+    "url": "https://github.com/Comerzzia/demo-stacks.git",
+    "stackfile": "/comerzzia/4/docker-compose-fastpos.yml"
+  },
+  "env": [
+    {
+        "name": "CZZ_CORE_STACK_NAME",
+        "label": "comerzzia CORE Stack name",
+        "description": "Exact name of the comerzzia CORE stack with which it will be linked"
+    },
+    {
+      "name": "CZZFASTPOS_VERSION",
+      "label": "Comerzzia FastPOS version",
+      "description": "",
+      "select": [
+        {
+          "text": "1.0",
+          "value": "fastpos:1.0",
+          "default": true
+        }
+      ]
+    },
+      {
+        "name": "CZZ_MEMORY",
+        "label": "Service max memory",
+        "description": "",
+        "select": [
+          {
+            "text": "M (256mb minimum recommended)",
+            "value": "256",
+            "default": true
+          },
+          {
+            "text": "XL (512mb)",
+            "value": "512"
+          },
+          {
+            "text": "XXL (1gb)",
+            "value": "1024"
+          }
+        ]
+      }
+  ]
+  },  
+  {
+  "type": 3,
   "title": "comerzzia DEMO environment data updater",
   "description": "This container replace a comerzzia installation (database & multimedia data) with the default data for a demonstration environment",
   "note": "<b>ATTENTION:</b> This updater completely replaces the database, so you will lose the information you currently have.<br/><b>comerzzia services (backoffice, SOL) mast be stopped before launch the updater</b>.<br/>Every container use an environment variable with the URL where there is a zip file with the demostration data. This URL allows you to load different data sets in the demo environment.",
