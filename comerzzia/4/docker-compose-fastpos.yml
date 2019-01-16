@@ -1,6 +1,6 @@
 version: '2'
 services:
-  eticket:
+  fastpos:
     image: eu.gcr.io/fresh-buffer-203111/producto/comerzzia/${CZZFASTPOS_VERSION}
     environment:
       COMERZZIA_DB_DRIVER: mysql
