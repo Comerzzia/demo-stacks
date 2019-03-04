@@ -23,7 +23,11 @@
           },
 		  {
             "text": "4.6.1",
-            "value": "backoffice:4.6.1",
+            "value": "backoffice:4.6.1"
+          },
+		  {
+            "text": "4.6.2",
+            "value": "backoffice:4.6.2",
             "default": true
           }
         ]
@@ -92,7 +96,11 @@
           },
 		  {
             "text": "4.6.1",
-            "value": "sol:4.6.1",
+            "value": "sol:4.6.1"
+          },
+		  {
+            "text": "4.6.2",
+            "value": "sol:4.6.2",
             "default": true
           }
         ]
@@ -153,7 +161,11 @@
           },
 		  {
             "text": "4.6.1",
-            "value": "sol-food:4.6.1",
+            "value": "sol-food:4.6.1"
+          },
+		  {
+            "text": "4.6.2",
+            "value": "sol-food:4.6.2",
             "default": true
           }
         ]
@@ -214,7 +226,11 @@
           },
 		  {
             "text": "4.6.1",
-            "value": "outstore:4.6.1",
+            "value": "outstore:4.6.1"
+          },
+		  {
+            "text": "4.6.2",
+            "value": "outstore:4.6.2",
             "default": true
           }
         ]
@@ -418,11 +434,7 @@
 	"name": "CZZ_DEMO_VERSION",
 	"label": "comerzzia version for demo data",
 	"description": "",
-	"select": [
-	    {
-	  	  "text": "4.6.0",
-		  "value": "4.6.0"
-	    },
+	"select": [	    
 	    {
 		  "text": "4.6.1",
 		  "value": "4.6.1",
