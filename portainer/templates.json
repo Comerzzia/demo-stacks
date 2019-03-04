@@ -437,7 +437,11 @@
 	"select": [	    
 	    {
 		  "text": "4.6.1",
-		  "value": "4.6.1",
+		  "value": "4.6.1"
+	    },
+		{
+		  "text": "4.6.2",
+		  "value": "4.6.2",
 	  	  "default": true
 	    }
   	  ]
