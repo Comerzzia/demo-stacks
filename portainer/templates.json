@@ -27,7 +27,11 @@
           },
 		  {
             "text": "4.6.2",
-            "value": "backoffice:4.6.2",
+            "value": "backoffice:4.6.2"
+          },
+		  {
+            "text": "4.6 latest",
+            "value": "backoffice:4.6",
             "default": true
           }
         ]
@@ -100,7 +104,11 @@
           },
 		  {
             "text": "4.6.2",
-            "value": "sol:4.6.2",
+            "value": "sol:4.6.2"
+          },
+		  {
+            "text": "4.6 latest",
+            "value": "sol:4.6",
             "default": true
           }
         ]
@@ -165,7 +173,11 @@
           },
 		  {
             "text": "4.6.2",
-            "value": "sol-food:4.6.2",
+            "value": "sol-food:4.6.2"
+          },
+		  {
+            "text": "4.6 latest",
+            "value": "sol-food:4.6",
             "default": true
           }
         ]
@@ -230,7 +242,11 @@
           },
 		  {
             "text": "4.6.2",
-            "value": "outstore:4.6.2",
+            "value": "outstore:4.6.2"
+          },
+		  {
+            "text": "4.6 latest",
+            "value": "outstore:4.6",
             "default": true
           }
         ]
@@ -441,7 +457,11 @@
 	    },
 		{
 		  "text": "4.6.2",
-		  "value": "4.6.2",
+		  "value": "4.6.2"
+	    },
+		{
+		  "text": "4.6 latest",
+		  "value": "4.6",
 	  	  "default": true
 	    }
   	  ]
