@@ -45,5 +45,7 @@ services:
 volumes:
    db_data:
       name: db_data
+      driver: local
    www_data:
       name: www_data
+      driver: local
